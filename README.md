@@ -1,15 +1,7 @@
-Welcome to the Travel Experience API take-home assignment! This project is a boilerplate designed to get you started quickly. Your task is to implement the core logic for **two AI-powered features** that use Microsoft's **Semantic Kernel**:
+Welcome to the Travel Experience API take-home assignment! This project is a boilerplate designed to get you started quickly. Your task is to implement the core logic for **AI-powered features** that use Microsoft's **Semantic Kernel**:
 
-1.  **Generate an activity description** for a given destination.
-2.  **Generate a summary of an itinerary** based on its activities and destinations.
+**Generate a summary of an itinerary** based on its activities and destinations.
 
-## Project Structure
-
-The solution follows a standard layered architecture:
-- `TravelExperience.API`: The entry point with API controllers.
-- `TravelExperience.Application`: Contains business logic, MediatR commands, and handlers.
-- `TravelExperience.Domain`: Holds the core entities and interfaces.
-- `TravelExperience.Infrastructure`: Contains data access logic (repositories) and external services.
 
 ## Prerequisites
 
@@ -23,10 +15,6 @@ The solution follows a standard layered architecture:
 
 1.  Update the `DefaultConnection` string in `TravelExperience.API/appsettings.json` if needed. It's configured to use SQL Server LocalDB by default.
 2.  Open a terminal in the `TravelExperience.API` directory.
-3.  Run the Entity Framework Core migrations to create the database schema and seed the initial data:
-    ```bash
-    dotnet ef database update --project ..\TravelExperience.Infrastructure\TravelExperience.Infrastructure.csproj --startup-project .
-    ```
 
 ### 2. AI Service Configuration
 
@@ -40,15 +28,9 @@ A basic `IAIService` interface is provided for you to implement. Your implementa
 
 ### 3. Your Tasks
 
-Your primary tasks are to implement the core AI logic within two command handlers:
-
-1.  **Generate an Activity Description:**
-    * **File to edit:** `TravelExperience.Application/Activities/Commands/GenerateActivityDescriptionCommandHandler.cs`
-    * **Method to complete:** `Handle`
-    * **Objective:** Use `IAIService` to generate a description for a new activity.
+Your primary tasks are to implement the core AI logic within command handler:
 
 2.  **Generate an Itinerary Summary:**
-    * **File to edit:** `TravelExperience.Application/Itineraries/Commands/GenerateItinerarySummaryCommandHandler.cs`
     * **Method to complete:** `Handle`
     * **Objective:** Use `IAIService` to generate a summary for an existing itinerary based on its activities.
 
